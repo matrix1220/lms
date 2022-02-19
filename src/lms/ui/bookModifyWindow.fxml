@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0">
+    <headerText>
+        Enter book details
+    </headerText>
+    <content>
+
+        <GridPane vgap="10" hgap="10">
+            <Label text="Title" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id = "txtTitle" promptText="Title" GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="90"/>
+
+            <Label text="Author" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id = "txtAuthor" promptText="Author" GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="90"/>
+
+            <Label text="Subject" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id = "txtSubject" promptText="Subject" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="90"/>
+
+            <Label text="ISBN" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id = "txtISBN" promptText="ISBN" GridPane.columnIndex="1" GridPane.rowIndex="3" prefWidth="90"/>
+
+            <Label text="Published Year" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <TextField fx:id = "txtYear" promptText="Year" GridPane.columnIndex="1" GridPane.rowIndex="4" prefWidth="90"/>
+
+            <Label text="Status" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+            <TextField fx:id = "txtStatus" promptText="Status" GridPane.columnIndex="1" GridPane.rowIndex="5" prefWidth="90"/>
+        </GridPane>
+    </content>
+
+</DialogPane>

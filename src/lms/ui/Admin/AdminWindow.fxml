@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<GridPane fx:controller="lms.ui.AdminController"
+          xmlns:fx="http://javafx.com/fxml">
+    <stylesheets>
+        <URL value="@adminWindowStyles.css"/>
+    </stylesheets>
+    <MenuBar>
+
+    </MenuBar>
+    <rowConstraints>
+        <RowConstraints percentHeight="5"/>
+        <RowConstraints percentHeight="95"/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="100"/>
+    </columnConstraints>
+
+
+        <HBox alignment="TOP_CENTER" GridPane.rowIndex="0">
+            <Button onAction="#toLibrarianScene" text="Librarians"/>
+            <Button onAction="#toStudentScene" text="Students"/>
+            <Button onAction="#toBookScene" text="Books"/>
+            <Button GridPane.rowIndex="2" text="Logout" onAction="#logout"/>
+        </HBox>
+        <HBox GridPane.rowIndex="1" alignment="CENTER">
+            <Pane fx:id="dataPane" >
+
+            </Pane>
+        </HBox>
+</GridPane>

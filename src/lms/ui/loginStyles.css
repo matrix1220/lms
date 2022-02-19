@@ -1,0 +1,24 @@
+GridPane{
+-fx-background-image:url("file:///../images/inha.jpg");
+-fx-background-repeat:no-repeat;
+-fx-background-size:100% 100%;
+-fx-font-size:20px;
+-fx-font-weight:bolder;
+-fx-font-family:"Times New Roman";
+}
+Label{
+-fx-text-fill:#34ebcd;
+-fx-font-weight:bold;
+}
+#loginText{
+-fx-font-size:30px;
+}
+Button{
+-fx-text-fill:darkblue;
+-fx-font-size:30px;
+}
+Button:hover{
+-fx-background-color:blue;
+-fx-text-fill:white;
+-fx-border:none;
+}

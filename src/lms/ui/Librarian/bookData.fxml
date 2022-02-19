@@ -1,0 +1,61 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<GridPane fx:controller="lms.ui.LibrarianController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="0">
+        <MenuBar translateY="10">
+            <Menu text="File">
+                <MenuItem text="Add" onAction="#addBook"/>
+                <MenuItem text="Modify" onAction="#modifyBook"/>
+                <MenuItem text="Delete" onAction="#deleteBook"/>
+            </Menu>
+        </MenuBar>
+    </HBox>
+
+    <TableView fx:id="tblBooks" GridPane.rowIndex="1" GridPane.columnIndex="0">
+        <columns>
+            <TableColumn text = "ID" prefWidth="100" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="book_id"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "Title" prefWidth="100" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="title"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text = "Subject" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="subject"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "Author" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="author"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "ISBN" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="ISBN"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "Publish date" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="publish_date"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "Status" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="status"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <HBox spacing="10" GridPane.rowIndex="2" GridPane.columnIndex="0">
+        <TextField maxHeight="40" minHeight="30" minWidth="100" maxWidth="120" fx:id = "txtSearch" promptText="Search for title, author, ISBN , publisher..." prefWidth="90"/>
+        <Button text = "Search" onAction="#searchBooks"/>
+    </HBox>
+</GridPane>
